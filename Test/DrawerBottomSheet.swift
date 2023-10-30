@@ -113,8 +113,10 @@ struct DrawerBottomSheet: View {
                 
                 if totalOffset > 0 {
                     self.offset = totalOffset
-                } else if totalOffset > -hiddenViewHeight-300 {
+                } else if totalOffset > -hiddenViewHeight {
                     self.offset = totalOffset
+                } else {
+                    self.offset = -hiddenViewHeight
                 }
             }
         }
